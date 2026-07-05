@@ -88,4 +88,4 @@ Query → Embedding → FAISS → Context → Grok → Answer
 
 ## 👨‍💻 Author
 
-Manish
+Rupesh Singh
