@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoChat AI</title>
+
+  <!-- Icons & Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="app-container">
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <i class="fas fa-robot"></i>
+          <span>NeoChat</span>
+        </div>
+
+        <!-- <button id="new-chat" class="new-chat-btn"  type="button">
+          <i class="fas fa-plus"></i>
+          <span>New Chat</span>
+        </button>
+
+        <div class="history-container">
+          <h3>Chat History</h3>
+          <div id="chat-history"></div>
+        </div> -->
+
+        <div class="settings">
+          <button id="clear-history" type="button">
+            <!-- <i class="fas fa-trash"></i> -->
+            <!-- <span>Clear History</span> -->
+          </button>
+
+          <button id="toggle-theme" type="button">
+            <!-- <i class="fas fa-moon"></i>
+            <span>Dark Mode</span> -->
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div class="chat-container">
+
+        <!-- Header -->
+        <div class="chat-header">
+          <div class="current-chat-title" id="current-chat-title">
+            New Conversation
+          </div>
+
+          <div class="header-actions">
+            <button id="regenerate-response" type="button" title="Regenerate response">
+              <!-- <i class="fas fa-sync"></i> -->
+            </button>
+
+            <button id="stop-response" type="button" title="Stop generating" style="display: none">
+              <i class="fas fa-stop"></i>
+            </button>
+
+            <button id="export-chat" type="button" title="Export conversation">
+              <!-- <i class="fas fa-download"></i> -->
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages" id="messages">
+          <div class="intro-message">
+            <h1>🚀 Welcome to NeoChat AI</h1>
+  <p>
+    Your smart AI companion for instant answers, creative ideas, and problem solving.
+  </p>
+  <p>
+    📄 Upload PDFs  • 💬 Ask anything •  ⚡ Get fast, intelligent responses
+  </p>
+
+            <div class="suggestion-chips">
+              <!-- <button class="suggestion-chip" type="button">Tell me a story</button>
+              <button class="suggestion-chip" type="button">Explain quantum computing</button>
+              <button class="suggestion-chip" type="button">Write a poem</button>
+              <button class="suggestion-chip" type="button">Help me learn JavaScript</button> -->
+            </div>
+          </div>
+          <div id="chat"></div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+          <div class="input-container">
+
+            <!-- File Upload Button -->
+            <button id="file-upload-button" type="button" title="Upload File">
+              <i class="fas fa-paperclip"></i>
+            </button>
+
+            <!-- Hidden File Input -->
+            <input type="file" id="file-upload" style="display: none" />
+
+            <!-- Text Input -->
+            <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+
+            <!-- Send Button -->
+            <button id="send-button" type="button" title="Send message">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+          </div>
+
+          <!-- File Preview -->
+          <div id="pending-file-preview"></div>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            ⚠️ Disclaimer: This AI assistant may generate inaccurate or incomplete information.
+    Please verify critical details before relying on them.
+    <p>© 2026 Manish Pandey. All rights reserved.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="/static/js/index.js"></script>
+
+</body>
+
+</html>
